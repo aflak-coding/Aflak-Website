@@ -1,0 +1,91 @@
+media:
+  - name: photos
+    label: "صور العاملات"
+    input: cvs/photos
+    output: /cvs/photos
+    categories: [image]
+    rename: safe
+  - name: pdfs
+    label: "ملفات السير الذاتية (PDF)"
+    input: cvs/pdf
+    output: /cvs/pdf
+    extensions: [pdf]
+    rename: safe
+
+content:
+  - name: cvs
+    label: "السير الذاتية"
+    type: file
+    path: data/cvs.json
+    format: json
+    list: true
+    operations:
+      delete: false
+    fields:
+      - name: name
+        label: "الاسم (بالإنجليزي كما في الـ PDF)"
+        type: string
+        required: true
+      - name: nat
+        label: "الجنسية"
+        type: select
+        required: true
+        options:
+          values:
+            - { name: n1, label: "كينيا" }
+            - { name: n2, label: "بنغلاديش" }
+            - { name: n3, label: "الفلبين" }
+            - { name: n4, label: "إثيوبيا" }
+            - { name: n5, label: "سريلانكا" }
+            - { name: n6, label: "أوغندا" }
+      - name: file
+        label: "ملف السيرة الذاتية (PDF)"
+        type: file
+        required: true
+        options:
+          media: pdfs
+      - name: photo
+        label: "صورة العاملة (اختياري)"
+        type: image
+        options:
+          media: photos
+      - name: job
+        label: "المهنة"
+        type: select
+        options:
+          values:
+            - { name: svc1, label: "عاملة منزلية" }
+            - { name: svc2, label: "سائق شخصي" }
+            - { name: svc3, label: "طباخ / طباخة" }
+            - { name: svc4, label: "ممرضة منزلية" }
+            - { name: svc5, label: "مساعدة شخصية" }
+      - name: age
+        label: "العمر"
+        type: number
+        options:
+          min: 18
+          max: 60
+      - name: rel
+        label: "الديانة"
+        type: select
+        options:
+          values:
+            - { name: m, label: "مسلم" }
+            - { name: o, label: "غير مسلم" }
+      - name: st
+        label: "الحالة الاجتماعية"
+        type: select
+        options:
+          values:
+            - { name: s, label: "غير متزوج" }
+            - { name: m, label: "متزوج" }
+      - name: exp
+        label: "الخبرة"
+        type: select
+        options:
+          values:
+            - { name: new, label: "قادم جديد" }
+            - { name: prev, label: "خبرة سابقة" }
+      - name: ref
+        label: "الرقم المرجعي (مثال: E-103)"
+        type: string
