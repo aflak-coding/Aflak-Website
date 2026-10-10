@@ -1,26 +1,37 @@
 [
   {
-    "nat": "n4",
     "name": "Sofiya Awel Malsebo",
-    "ref": "E-101",
+    "nat": "n4",
+    "file": "cvs/ethiopia/sofiya-awel-malsebo.pdf",
+    "photo": "cvs/ethiopia/sofiya-awel-malsebo.jpg",
     "job": "svc1",
     "age": 27,
     "rel": "m",
     "st": "s",
     "exp": "new",
-    "photo": "cvs/ethiopia/sofiya-awel-malsebo.jpg",
-    "file": "cvs/ethiopia/sofiya-awel-malsebo.pdf"
+    "ref": "E-101"
   },
   {
-    "nat": "n4",
     "name": "Zinet Awol Seid",
-    "ref": "E-102",
+    "nat": "n4",
+    "file": "cvs/ethiopia/zinet-awol-seid.pdf",
+    "photo": "cvs/ethiopia/zinet-awol-seid.jpg",
     "job": "svc1",
     "age": 33,
     "rel": "m",
     "st": "s",
     "exp": "new",
-    "photo": "cvs/ethiopia/zinet-awol-seid.jpg",
-    "file": "cvs/ethiopia/zinet-awol-seid.pdf"
+    "ref": "E-102"
+  },
+  {
+    "name": "ASIREBEB ALEBEL TAREKEGN",
+    "nat": "n4",
+    "file": "/cvs/pdf/asirebeb-cv.pdf",
+    "job": "svc1",
+    "age": 23,
+    "rel": "o",
+    "st": "s",
+    "exp": "new",
+    "ref": "E-104"
   }
 ]
